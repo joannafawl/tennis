@@ -27,6 +27,14 @@ describe GameManager do
       gm.add_point(:player_one)
       expect(gm.get_score).to eq ({ player_one: 30, player_two: 15 })
    end
+
+   it "Game score 40 - 15" do
+    gm.add_point(:player_one)
+    gm.add_point(:player_two)
+    gm.add_point(:player_one)
+    gm.add_point(:player_one)
+    expect(gm.get_score).to eq ({ player_one: 40, player_two: 15 })
+ end
  end
 
  context "Decide point winner" do
