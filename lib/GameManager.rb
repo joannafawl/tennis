@@ -12,4 +12,8 @@ class GameManager
         @score
     end
 
+    def add_point(player)
+        @score[player] = 15
+    end
+
 end
