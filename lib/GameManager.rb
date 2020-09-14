@@ -13,7 +13,11 @@ class GameManager
     end
 
     def add_point(player)
-        @score[player] = 15
+        if @score[player] == 0 
+            @score[player] = 15
+        else
+            @score[player] = 30 
+        end
     end
 
 end
